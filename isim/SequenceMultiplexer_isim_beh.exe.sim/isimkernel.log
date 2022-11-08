@@ -1,0 +1,28 @@
+Command line:
+   SequenceMultiplexer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  20948
+
+Sun Jun 05 22:37:15 2022
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 5512.08 Meg
+
+ Total Signals          : 41
+ Total Nets             : 389
+ Total Signal Drivers   : 11
+ Total Blocks           : 9
+ Total Primitive Blocks : 8
+ Total Processes        : 10
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 890
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 5512.08 Meg
+
+Sun Jun 05 22:37:19 2022
+

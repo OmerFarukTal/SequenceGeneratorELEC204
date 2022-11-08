@@ -1,0 +1,87 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml SDecoder.twx SDecoder.ncd -o SDecoder.twr SDecoder.pcf
+
+Design file:              SDecoder.ncd
+Physical constraint file: SDecoder.pcf
+Device,package,speed:     xc3s50a,vq100,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+input<0>       |SBUS<0>        |    6.495|
+input<0>       |SBUS<1>        |    6.492|
+input<0>       |SBUS<2>        |    6.658|
+input<0>       |SBUS<3>        |    6.786|
+input<0>       |SBUS<4>        |    6.831|
+input<0>       |SBUS<5>        |    7.085|
+input<0>       |SBUS<6>        |    6.752|
+input<1>       |SBUS<0>        |    7.625|
+input<1>       |SBUS<1>        |    7.527|
+input<1>       |SBUS<2>        |    7.161|
+input<1>       |SBUS<3>        |    7.785|
+input<1>       |SBUS<4>        |    7.337|
+input<1>       |SBUS<5>        |    7.550|
+input<1>       |SBUS<6>        |    7.847|
+input<2>       |SBUS<0>        |    7.242|
+input<2>       |SBUS<1>        |    7.090|
+input<2>       |SBUS<2>        |    6.434|
+input<2>       |SBUS<3>        |    7.144|
+input<2>       |SBUS<4>        |    6.512|
+input<2>       |SBUS<5>        |    6.826|
+input<2>       |SBUS<6>        |    7.495|
+input<3>       |SBUS<0>        |    7.448|
+input<3>       |SBUS<1>        |    7.448|
+input<3>       |SBUS<2>        |    6.370|
+input<3>       |SBUS<3>        |    7.292|
+input<3>       |SBUS<4>        |    6.394|
+input<3>       |SBUS<5>        |    6.793|
+input<3>       |SBUS<6>        |    7.667|
+---------------+---------------+---------+
+
+
+Analysis completed Sat May 28 16:27:47 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4504 MB
+
+
+

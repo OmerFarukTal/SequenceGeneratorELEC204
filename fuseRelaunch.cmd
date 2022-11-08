@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Project3Mult_isim_beh.exe" -prj "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Project3Mult_beh.prj" "work.Project3Mult" 

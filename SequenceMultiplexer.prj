@@ -1,0 +1,5 @@
+vhdl work "Woodal.vhd"
+vhdl work "Tetrabonacci.vhd"
+vhdl work "StellaOctanga.vhd"
+vhdl work "Jacobtshal.vhd"
+vhdl work "SequenceMultiplexer.vhd"

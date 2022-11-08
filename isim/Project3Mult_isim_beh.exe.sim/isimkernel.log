@@ -1,0 +1,28 @@
+Command line:
+   Project3Mult_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  21401
+
+Sun Jun 05 23:09:08 2022
+
+
+ Elaboration Time: 0.203125 sec
+
+ Current Memory Usage: 5512.1 Meg
+
+ Total Signals          : 108
+ Total Nets             : 556
+ Total Signal Drivers   : 36
+ Total Blocks           : 16
+ Total Primitive Blocks : 13
+ Total Processes        : 23
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 1058
+
+ Total Simulation Time: 0.5 sec
+
+ Current Memory Usage: 5197.49 Meg
+
+Sun Jun 05 23:10:44 2022
+

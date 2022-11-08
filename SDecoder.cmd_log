@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.xst" -ofn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.syr" 
+xst -intstyle ise -ifn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.xst" -ofn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.syr" 
+xst -intstyle ise -ifn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.xst" -ofn "C:/Users/otal19/Desktop/Project/WoodalNumbers/SDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-vq100-5 SDecoder.ngc SDecoder.ngd  
+map -intstyle ise -p xc3s50a-vq100-5 -cm area -ir off -pr off -c 100 -o SDecoder_map.ncd SDecoder.ngd SDecoder.pcf 
+par -w -intstyle ise -ol high -t 1 SDecoder_map.ncd SDecoder.ncd SDecoder.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml SDecoder.twx SDecoder.ncd -o SDecoder.twr SDecoder.pcf 

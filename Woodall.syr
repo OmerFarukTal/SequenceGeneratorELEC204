@@ -1,0 +1,488 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: Woodall.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Woodall.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Woodall"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-vq100
+
+---- Source Options
+Top Module Name                    : Woodall
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/otal19/Desktop/Project/WoodalNumbers/Woodal.vhd" in Library work.
+Entity <woodall> compiled.
+Entity <woodall> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Woodall> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Woodall> in library <work> (Architecture <behavioral>).
+Entity <Woodall> analyzed. Unit <Woodall> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Woodall>.
+    Related source file is "C:/Users/otal19/Desktop/Project/WoodalNumbers/Woodal.vhd".
+    Register <temp> equivalent to <result> has been removed
+WARNING:Xst:643 - "C:/Users/otal19/Desktop/Project/WoodalNumbers/Woodal.vhd" line 60: The result of a 34x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 34x32-bit multiplier for signal <$mult0000> created at line 60.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <index>.
+    Found 32-bit adder for signal <index$addsub0000> created at line 61.
+    Found 32-bit 4-to-1 multiplexer for signal <index$mux0001> created at line 59.
+    Found 32-bit register for signal <result>.
+    Found 32-bit subtractor for signal <result$addsub0000> created at line 60.
+    Summary:
+	inferred  65 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred  32 Multiplexer(s).
+Unit <Woodall> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 34x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 32-bit register                                       : 2
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 33x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Woodall> ...
+WARNING:Xst:1293 - FF/Latch <result_0> has a constant value of 1 in block <Woodall>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Woodall, actual ratio is 56.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Woodall.ngr
+Top Level Output File Name         : Woodall
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 35
+
+Cell Usage :
+# BELS                             : 2139
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 13
+#      LUT2                        : 326
+#      LUT2_D                      : 1
+#      LUT3                        : 8
+#      LUT3_L                      : 1
+#      LUT4                        : 355
+#      LUT4_D                      : 15
+#      MULT_AND                    : 226
+#      MUXCY                       : 571
+#      VCC                         : 1
+#      XORCY                       : 588
+# FlipFlops/Latches                : 64
+#      FD                          : 60
+#      FDR                         : 3
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 2
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50avq100-5 
+
+ Number of Slices:                      401  out of    704    56%  
+ Number of Slice Flip Flops:             64  out of   1408     4%  
+ Number of 4 input LUTs:                752  out of   1408    53%  
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of     68    51%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 64    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 22.062ns (Maximum Frequency: 45.327MHz)
+   Minimum input arrival time before clock: 23.072ns
+   Maximum output required time after clock: 5.271ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 22.062ns (frequency: 45.327MHz)
+  Total number of paths / destination ports: 4631839569 / 66
+-------------------------------------------------------------------------
+Delay:               22.062ns (Levels of Logic = 52)
+  Source:            index_15 (FF)
+  Destination:       result_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: index_15 to result_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.495   0.517  index_15 (index_15)
+     LUT2:I1->O           17   0.562   0.959  index_mux0000<15>1 (Mmult__mult0000_index_mux0000<15>_x_result_cmp_eq0033_mand)
+     LUT3:I1->O            1   0.562   0.000  result_cmp_eq00321_wg_lut<0> (result_cmp_eq00321_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  result_cmp_eq00321_wg_cy<0> (result_cmp_eq00321_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<1> (result_cmp_eq00321_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<2> (result_cmp_eq00321_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<3> (result_cmp_eq00321_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<4> (result_cmp_eq00321_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<5> (result_cmp_eq00321_wg_cy<5>)
+     MUXCY:CI->O          31   0.179   1.075  result_cmp_eq00321_wg_cy<6> (result_cmp_eq00321_wg_cy<6>)
+     LUT4:I3->O           15   0.561   0.864  result_cmp_eq00321_1 (result_cmp_eq00321)
+     MULT_AND:I0->LO       0   0.593   0.000  Mmult__mult0000_index_mux0000<2>_x_result_cmp_eq0032_mand (Mmult__mult0000_index_mux0000<2>_x_result_cmp_eq0032_mand1)
+     MUXCY:DI->O           1   0.713   0.000  Mmult__mult0000_Madd15_cy<2> (Mmult__mult0000_Madd15_cy<2>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd15_xor<3> (Mmult__mult0000_Madd22_lut<3>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd22_cy<3>_rt (Mmult__mult0000_Madd22_cy<3>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd22_cy<3> (Mmult__mult0000_Madd22_cy<3>)
+     XORCY:CI->O           1   0.654   0.423  Mmult__mult0000_Madd22_xor<4> (Mmult__mult0000_Madd_4102)
+     LUT2:I1->O            1   0.562   0.000  Mmult__mult0000_Madd27_lut<4> (Mmult__mult0000_Madd27_lut<4>)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd27_cy<4> (Mmult__mult0000_Madd27_cy<4>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd27_xor<5> (Mmult__mult0000_Madd29_lut<5>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd29_cy<5>_rt (Mmult__mult0000_Madd29_cy<5>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd29_cy<5> (Mmult__mult0000_Madd29_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<6> (Mmult__mult0000_Madd29_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<7> (Mmult__mult0000_Madd29_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<8> (Mmult__mult0000_Madd29_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<9> (Mmult__mult0000_Madd29_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<10> (Mmult__mult0000_Madd29_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<11> (Mmult__mult0000_Madd29_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<12> (Mmult__mult0000_Madd29_cy<12>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd29_xor<13> (Mmult__mult0000_Madd30_lut<13>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd30_cy<13>_rt (Mmult__mult0000_Madd30_cy<13>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd30_cy<13> (Mmult__mult0000_Madd30_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<14> (Mmult__mult0000_Madd30_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<15> (Mmult__mult0000_Madd30_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<16> (Mmult__mult0000_Madd30_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<17> (Mmult__mult0000_Madd30_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<18> (Mmult__mult0000_Madd30_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<19> (Mmult__mult0000_Madd30_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<20> (Mmult__mult0000_Madd30_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<21> (Mmult__mult0000_Madd30_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<22> (Mmult__mult0000_Madd30_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<23> (Mmult__mult0000_Madd30_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<24> (Mmult__mult0000_Madd30_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<25> (Mmult__mult0000_Madd30_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<26> (Mmult__mult0000_Madd30_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<27> (Mmult__mult0000_Madd30_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<28> (Mmult__mult0000_Madd30_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<29> (Mmult__mult0000_Madd30_cy<29>)
+     XORCY:CI->O           1   0.654   0.357  Mmult__mult0000_Madd30_xor<30> (_mult0000<30>)
+     INV:I->O              1   0.562   0.000  Msub_result_addsub0000_lut<30>_INV_0 (Msub_result_addsub0000_lut<30>)
+     MUXCY:S->O            0   0.523   0.000  Msub_result_addsub0000_cy<30> (Msub_result_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.654   0.359  Msub_result_addsub0000_xor<31> (result_addsub0000<31>)
+     LUT4:I3->O            1   0.561   0.000  result_mux0001<31>1 (result_mux0001<31>)
+     FD:D                      0.197          result_31
+    ----------------------------------------
+    Total                     22.062ns (16.112ns logic, 5.950ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 3649342775 / 67
+-------------------------------------------------------------------------
+Offset:              23.072ns (Levels of Logic = 53)
+  Source:            ResetButton (PAD)
+  Destination:       result_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: ResetButton to result_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           103   0.824   1.200  ResetButton_IBUF (ResetButton_IBUF)
+     LUT2:I0->O           17   0.561   0.959  index_mux0000<15>1 (Mmult__mult0000_index_mux0000<15>_x_result_cmp_eq0033_mand)
+     LUT3:I1->O            1   0.562   0.000  result_cmp_eq00321_wg_lut<0> (result_cmp_eq00321_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  result_cmp_eq00321_wg_cy<0> (result_cmp_eq00321_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<1> (result_cmp_eq00321_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<2> (result_cmp_eq00321_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<3> (result_cmp_eq00321_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<4> (result_cmp_eq00321_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  result_cmp_eq00321_wg_cy<5> (result_cmp_eq00321_wg_cy<5>)
+     MUXCY:CI->O          31   0.179   1.075  result_cmp_eq00321_wg_cy<6> (result_cmp_eq00321_wg_cy<6>)
+     LUT4:I3->O           15   0.561   0.864  result_cmp_eq00321_1 (result_cmp_eq00321)
+     MULT_AND:I0->LO       0   0.593   0.000  Mmult__mult0000_index_mux0000<2>_x_result_cmp_eq0032_mand (Mmult__mult0000_index_mux0000<2>_x_result_cmp_eq0032_mand1)
+     MUXCY:DI->O           1   0.713   0.000  Mmult__mult0000_Madd15_cy<2> (Mmult__mult0000_Madd15_cy<2>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd15_xor<3> (Mmult__mult0000_Madd22_lut<3>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd22_cy<3>_rt (Mmult__mult0000_Madd22_cy<3>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd22_cy<3> (Mmult__mult0000_Madd22_cy<3>)
+     XORCY:CI->O           1   0.654   0.423  Mmult__mult0000_Madd22_xor<4> (Mmult__mult0000_Madd_4102)
+     LUT2:I1->O            1   0.562   0.000  Mmult__mult0000_Madd27_lut<4> (Mmult__mult0000_Madd27_lut<4>)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd27_cy<4> (Mmult__mult0000_Madd27_cy<4>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd27_xor<5> (Mmult__mult0000_Madd29_lut<5>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd29_cy<5>_rt (Mmult__mult0000_Madd29_cy<5>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd29_cy<5> (Mmult__mult0000_Madd29_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<6> (Mmult__mult0000_Madd29_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<7> (Mmult__mult0000_Madd29_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<8> (Mmult__mult0000_Madd29_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<9> (Mmult__mult0000_Madd29_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<10> (Mmult__mult0000_Madd29_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<11> (Mmult__mult0000_Madd29_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd29_cy<12> (Mmult__mult0000_Madd29_cy<12>)
+     XORCY:CI->O           1   0.654   0.465  Mmult__mult0000_Madd29_xor<13> (Mmult__mult0000_Madd30_lut<13>)
+     LUT1:I0->O            1   0.561   0.000  Mmult__mult0000_Madd30_cy<13>_rt (Mmult__mult0000_Madd30_cy<13>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mmult__mult0000_Madd30_cy<13> (Mmult__mult0000_Madd30_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<14> (Mmult__mult0000_Madd30_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<15> (Mmult__mult0000_Madd30_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<16> (Mmult__mult0000_Madd30_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<17> (Mmult__mult0000_Madd30_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<18> (Mmult__mult0000_Madd30_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<19> (Mmult__mult0000_Madd30_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<20> (Mmult__mult0000_Madd30_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<21> (Mmult__mult0000_Madd30_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<22> (Mmult__mult0000_Madd30_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<23> (Mmult__mult0000_Madd30_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<24> (Mmult__mult0000_Madd30_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<25> (Mmult__mult0000_Madd30_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<26> (Mmult__mult0000_Madd30_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<27> (Mmult__mult0000_Madd30_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<28> (Mmult__mult0000_Madd30_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  Mmult__mult0000_Madd30_cy<29> (Mmult__mult0000_Madd30_cy<29>)
+     XORCY:CI->O           1   0.654   0.357  Mmult__mult0000_Madd30_xor<30> (_mult0000<30>)
+     INV:I->O              1   0.562   0.000  Msub_result_addsub0000_lut<30>_INV_0 (Msub_result_addsub0000_lut<30>)
+     MUXCY:S->O            0   0.523   0.000  Msub_result_addsub0000_cy<30> (Msub_result_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.654   0.359  Msub_result_addsub0000_xor<31> (result_addsub0000<31>)
+     LUT4:I3->O            1   0.561   0.000  result_mux0001<31>1 (result_mux0001<31>)
+     FD:D                      0.197          result_31
+    ----------------------------------------
+    Total                     23.072ns (16.440ns logic, 6.632ns route)
+                                       (71.3% logic, 28.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              5.271ns (Levels of Logic = 1)
+  Source:            result_31 (FF)
+  Destination:       num<31> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: result_31 to num<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.495   0.380  result_31 (result_31)
+     OBUF:I->O                 4.396          num_31_OBUF (num<31>)
+    ----------------------------------------
+    Total                      5.271ns (4.891ns logic, 0.380ns route)
+                                       (92.8% logic, 7.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.83 secs
+ 
+--> 
+
+Total memory usage is 4535144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

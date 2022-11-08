@@ -1,0 +1,602 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: SequenceMultiplexer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SequenceMultiplexer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SequenceMultiplexer"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-vq100
+
+---- Source Options
+Top Module Name                    : SequenceMultiplexer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Woodal.vhd" in Library work.
+Architecture behavioral of Entity woodall is up to date.
+Compiling vhdl file "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Jacobtshal.vhd" in Library work.
+Architecture behavioral of Entity jacobtshal is up to date.
+Compiling vhdl file "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Tetrabonacci.vhd" in Library work.
+Architecture behavioral of Entity tetrabonacci is up to date.
+Compiling vhdl file "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/StellaOctanga.vhd" in Library work.
+Architecture behavioral of Entity stellaoctanga is up to date.
+Compiling vhdl file "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/SequenceMultiplexer.vhd" in Library work.
+Entity <sequencemultiplexer> compiled.
+Entity <sequencemultiplexer> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <SequenceMultiplexer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Woodall> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Jacobtshal> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Tetrabonacci> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <StellaOctanga> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <SequenceMultiplexer> in library <work> (Architecture <behavioral>).
+Entity <SequenceMultiplexer> analyzed. Unit <SequenceMultiplexer> generated.
+
+Analyzing Entity <Woodall> in library <work> (Architecture <behavioral>).
+Entity <Woodall> analyzed. Unit <Woodall> generated.
+
+Analyzing Entity <Jacobtshal> in library <work> (Architecture <behavioral>).
+Entity <Jacobtshal> analyzed. Unit <Jacobtshal> generated.
+
+Analyzing Entity <Tetrabonacci> in library <work> (Architecture <behavioral>).
+Entity <Tetrabonacci> analyzed. Unit <Tetrabonacci> generated.
+
+Analyzing Entity <StellaOctanga> in library <work> (Architecture <behavioral>).
+Entity <StellaOctanga> analyzed. Unit <StellaOctanga> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Woodall>.
+    Related source file is "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Woodal.vhd".
+    Register <temp> equivalent to <result> has been removed
+WARNING:Xst:643 - "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Woodal.vhd" line 62: The result of a 34x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 34x32-bit multiplier for signal <$mult0000> created at line 62.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <index>.
+    Found 32-bit adder for signal <index$addsub0000> created at line 63.
+    Found 32-bit 4-to-1 multiplexer for signal <index$mux0001> created at line 61.
+    Found 32-bit register for signal <result>.
+    Found 32-bit subtractor for signal <result$addsub0000> created at line 62.
+    Summary:
+	inferred  65 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred  32 Multiplexer(s).
+Unit <Woodall> synthesized.
+
+
+Synthesizing Unit <Jacobtshal>.
+    Related source file is "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Jacobtshal.vhd".
+    Register <temp> equivalent to <fiki> has been removed
+    Found 32-bit register for signal <fbir>.
+    Found 32-bit 4-to-1 multiplexer for signal <fbir$mux0001>.
+    Found 32-bit register for signal <fiki>.
+    Found 32-bit adder for signal <fiki$add0000> created at line 64.
+    Found 32-bit register for signal <fsifir>.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <index>.
+    Found 32-bit adder for signal <index$addsub0000> created at line 67.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <Jacobtshal> synthesized.
+
+
+Synthesizing Unit <Tetrabonacci>.
+    Related source file is "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/Tetrabonacci.vhd".
+    Register <temp> equivalent to <fdort> has been removed
+    Found 32-bit register for signal <fbir>.
+    Found 32-bit register for signal <fdort>.
+    Found 32-bit adder for signal <fdort$add0000> created at line 69.
+    Found 32-bit adder for signal <fdort$addsub0000> created at line 69.
+    Found 32-bit register for signal <fiki>.
+    Found 32-bit register for signal <fsifir>.
+    Found 32-bit register for signal <fuc>.
+    Found 32-bit adder for signal <fuc$add0000> created at line 69.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <index>.
+    Found 32-bit adder for signal <index$addsub0000> created at line 74.
+    Summary:
+	inferred 193 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <Tetrabonacci> synthesized.
+
+
+Synthesizing Unit <StellaOctanga>.
+    Related source file is "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/StellaOctanga.vhd".
+WARNING:Xst:643 - "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/StellaOctanga.vhd" line 60: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/StellaOctanga.vhd" line 60: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 32x32-bit multiplier for signal <$mult0000> created at line 60.
+    Found 1-bit register for signal <hold>.
+    Found 32-bit register for signal <index>.
+    Found 32-bit adder for signal <index$addsub0000> created at line 61.
+    Found 32-bit 4-to-1 multiplexer for signal <index$mux0001> created at line 59.
+    Found 32-bit register for signal <result>.
+    Found 32-bit subtractor for signal <result$addsub0000> created at line 60.
+    Found 32x32-bit multiplier for signal <result$mult0000> created at line 60.
+    Found 32-bit 4-to-1 multiplexer for signal <result$mux0001>.
+    Found 32-bit register for signal <temp>.
+    Summary:
+	inferred  97 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred  64 Multiplexer(s).
+Unit <StellaOctanga> synthesized.
+
+
+Synthesizing Unit <SequenceMultiplexer>.
+    Related source file is "C:/Users/otal19/Desktop/Project-20220605T160425Z-001/Project/WoodalNumbers/SequenceMultiplexer.vhd".
+    Found 32-bit register for signal <mainNum>.
+    Found 32-bit register for signal <choice1>.
+    Found 32-bit register for signal <choice2>.
+    Summary:
+	inferred  96 D-type flip-flop(s).
+Unit <SequenceMultiplexer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x32-bit multiplier                                  : 2
+ 34x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 10
+ 32-bit adder                                          : 8
+ 32-bit subtractor                                     : 2
+# Registers                                            : 22
+ 1-bit register                                        : 4
+ 32-bit register                                       : 18
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <fsifir_31> of sequential type is unconnected in block <S2>.
+WARNING:Xst:2677 - Node <fsifir_31> of sequential type is unconnected in block <Jacobtshal>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 32x32-bit multiplier                                  : 2
+ 33x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 10
+ 32-bit adder                                          : 8
+ 32-bit subtractor                                     : 2
+# Registers                                            : 579
+ Flip-Flops                                            : 579
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <choice1_0> in Unit <SequenceMultiplexer> is equivalent to the following 31 FFs/Latches, which will be removed : <choice1_1> <choice1_2> <choice1_3> <choice1_4> <choice1_5> <choice1_6> <choice1_7> <choice1_8> <choice1_9> <choice1_10> <choice1_11> <choice1_12> <choice1_13> <choice1_14> <choice1_15> <choice1_16> <choice1_17> <choice1_18> <choice1_19> <choice1_20> <choice1_21> <choice1_22> <choice1_23> <choice1_24> <choice1_25> <choice1_26> <choice1_27> <choice1_28> <choice1_29> <choice1_30> <choice1_31> 
+INFO:Xst:2261 - The FF/Latch <choice2_0> in Unit <SequenceMultiplexer> is equivalent to the following 31 FFs/Latches, which will be removed : <choice2_1> <choice2_2> <choice2_3> <choice2_4> <choice2_5> <choice2_6> <choice2_7> <choice2_8> <choice2_9> <choice2_10> <choice2_11> <choice2_12> <choice2_13> <choice2_14> <choice2_15> <choice2_16> <choice2_17> <choice2_18> <choice2_19> <choice2_20> <choice2_21> <choice2_22> <choice2_23> <choice2_24> <choice2_25> <choice2_26> <choice2_27> <choice2_28> <choice2_29> <choice2_30> <choice2_31> 
+
+Optimizing unit <SequenceMultiplexer> ...
+
+Optimizing unit <Woodall> ...
+WARNING:Xst:1293 - FF/Latch <result_0> has a constant value of 1 in block <Woodall>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Jacobtshal> ...
+WARNING:Xst:1293 - FF/Latch <fbir_0> has a constant value of 1 in block <Jacobtshal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <fbir_0> has a constant value of 1 in block <Jacobtshal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <fbir_0> has a constant value of 1 in block <Jacobtshal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <fbir_0> has a constant value of 1 in block <Jacobtshal>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <fiki_0> has a constant value of 1 in block <Jacobtshal>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Tetrabonacci> ...
+
+Optimizing unit <StellaOctanga> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <S1/hold> in Unit <SequenceMultiplexer> is equivalent to the following 3 FFs/Latches, which will be removed : <S2/hold> <S3/hold> <S4/hold> 
+Found area constraint ratio of 100 (+ 5) on block SequenceMultiplexer, actual ratio is 194.
+Optimizing block <SequenceMultiplexer> to meet ratio 100 (+ 5) of 704 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <SequenceMultiplexer>, final ratio is 177.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 511
+ Flip-Flops                                            : 511
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SequenceMultiplexer.ngr
+Top Level Output File Name         : SequenceMultiplexer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 37
+
+Cell Usage :
+# BELS                             : 6026
+#      GND                         : 1
+#      INV                         : 98
+#      LUT1                        : 80
+#      LUT2                        : 724
+#      LUT2_D                      : 1
+#      LUT3                        : 183
+#      LUT4                        : 1253
+#      LUT4_D                      : 8
+#      MULT_AND                    : 574
+#      MUXCY                       : 1493
+#      MUXF5                       : 43
+#      VCC                         : 1
+#      XORCY                       : 1567
+# FlipFlops/Latches                : 511
+#      FD                          : 187
+#      FDR                         : 67
+#      FDRE                        : 250
+#      FDS                         : 6
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 36
+#      IBUF                        : 4
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50avq100-5 
+
+ Number of Slices:                     1251  out of    704   177% (*) 
+ Number of Slice Flip Flops:            511  out of   1408    36%  
+ Number of 4 input LUTs:               2347  out of   1408   166% (*) 
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of     68    54%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 511   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 30.853ns (Maximum Frequency: 32.411MHz)
+   Minimum input arrival time before clock: 31.797ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 30.853ns (frequency: 32.411MHz)
+  Total number of paths / destination ports: 458206824761 / 925
+-------------------------------------------------------------------------
+Delay:               30.853ns (Levels of Logic = 46)
+  Source:            S4/index_2 (FF)
+  Destination:       S4/result_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: S4/index_2 to S4/result_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.495   0.709  S4/index_2 (S4/index_2)
+     LUT2:I1->O           27   0.562   1.072  S4/index_cmp_eq000027_1 (S4/index_cmp_eq0000271)
+     MULT_AND:I1->LO       0   0.597   0.000  S4/Mmult__mult0000_index_mux0000<2>_x_index_mux0000<7>_mand (S4/Mmult__mult0000_index_mux0000<2>_x_index_mux0000<7>_mand1)
+     MUXCY:DI->O           1   0.713   0.000  S4/Mmult__mult0000_Madd7_cy<6> (S4/Mmult__mult0000_Madd7_cy<6>)
+     XORCY:CI->O           1   0.654   0.465  S4/Mmult__mult0000_Madd7_xor<7> (S4/Mmult__mult0000_Madd_128)
+     LUT1:I0->O            1   0.561   0.000  S4/Mmult__mult0000_Madd11_cy<7>_rt (S4/Mmult__mult0000_Madd11_cy<7>_rt)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd11_cy<7> (S4/Mmult__mult0000_Madd11_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd11_cy<8> (S4/Mmult__mult0000_Madd11_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd11_cy<9> (S4/Mmult__mult0000_Madd11_cy<9>)
+     XORCY:CI->O           1   0.654   0.380  S4/Mmult__mult0000_Madd11_xor<10> (S4/Mmult__mult0000_Madd_1511)
+     LUT3:I2->O            1   0.561   0.000  S4/Mmult__mult0000_Madd15_lut<15> (S4/Mmult__mult0000_Madd15_lut<15>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd15_cy<15> (S4/Mmult__mult0000_Madd15_cy<15>)
+     XORCY:CI->O           1   0.654   0.465  S4/Mmult__mult0000_Madd15_xor<16> (S4/Mmult__mult0000_Madd_1615)
+     LUT1:I0->O            1   0.561   0.000  S4/Mmult__mult0000_Madd16_cy<16>_rt (S4/Mmult__mult0000_Madd16_cy<16>_rt)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd16_cy<16> (S4/Mmult__mult0000_Madd16_cy<16>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult__mult0000_Madd16_xor<17> (S4/Mmult__mult0000_Madd_1716)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult__mult0000_Madd17_lut<17> (S4/Mmult__mult0000_Madd17_lut<17>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd17_cy<17> (S4/Mmult__mult0000_Madd17_cy<17>)
+     XORCY:CI->O           1   0.654   0.357  S4/Mmult__mult0000_Madd17_xor<18> (S4/_mult0000<18>)
+     INV:I->O              1   0.562   0.000  S4/Msub_result_addsub0000_lut<18>_INV_0 (S4/Msub_result_addsub0000_lut<18>)
+     MUXCY:S->O            1   0.523   0.000  S4/Msub_result_addsub0000_cy<18> (S4/Msub_result_addsub0000_cy<18>)
+     XORCY:CI->O          13   0.654   0.836  S4/Msub_result_addsub0000_xor<19> (S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand)
+     MULT_AND:I1->LO       0   0.597   0.000  S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand (S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand1)
+     MUXCY:DI->O           1   0.713   0.000  S4/Mmult_result_mult0000_Madd10_cy<10> (S4/Mmult_result_mult0000_Madd10_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<11> (S4/Mmult_result_mult0000_Madd10_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<12> (S4/Mmult_result_mult0000_Madd10_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<13> (S4/Mmult_result_mult0000_Madd10_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<14> (S4/Mmult_result_mult0000_Madd10_cy<14>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd10_xor<15> (S4/Mmult_result_mult0000_Madd_2410)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd20_lut<17> (S4/Mmult_result_mult0000_Madd20_lut<17>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd20_cy<17> (S4/Mmult_result_mult0000_Madd20_cy<17>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd20_xor<18> (S4/Mmult_result_mult0000_Madd_2520)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd26_lut<22> (S4/Mmult_result_mult0000_Madd26_lut<22>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd26_cy<22> (S4/Mmult_result_mult0000_Madd26_cy<22>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd26_xor<23> (S4/Mmult_result_mult0000_Madd_2626)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd29_lut<26> (S4/Mmult_result_mult0000_Madd29_lut<26>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd29_cy<26> (S4/Mmult_result_mult0000_Madd29_cy<26>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd29_xor<27> (S4/Mmult_result_mult0000_Madd_2729)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd30_lut<27> (S4/Mmult_result_mult0000_Madd30_lut<27>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd30_cy<27> (S4/Mmult_result_mult0000_Madd30_cy<27>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd30_xor<28> (S4/Mmult_result_mult0000_Madd_2830)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd31_lut<28> (S4/Mmult_result_mult0000_Madd31_lut<28>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd31_cy<28> (S4/Mmult_result_mult0000_Madd31_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd31_cy<29> (S4/Mmult_result_mult0000_Madd31_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  S4/Mmult_result_mult0000_Madd31_cy<30> (S4/Mmult_result_mult0000_Madd31_cy<30>)
+     XORCY:CI->O           2   0.654   0.382  S4/Mmult_result_mult0000_Madd31_xor<31> (S4/result_mult0000<31>)
+     LUT4:I3->O            1   0.561   0.000  S4/Mmux_result_mux000111 (S4/result_mux0001<0>)
+     FDRE:D                    0.197          S4/result_31
+    ----------------------------------------
+    Total                     30.853ns (23.650ns logic, 7.203ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 422522752132 / 1022
+-------------------------------------------------------------------------
+Offset:              31.797ns (Levels of Logic = 49)
+  Source:            ResetButton (PAD)
+  Destination:       S4/result_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: ResetButton to S4/result_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           470   0.824   1.190  ResetButton_IBUF (ResetButton_IBUF)
+     INV:I->O             40   0.562   1.075  S2/fbir_mux0000<10>11_INV_0 (S2/fbir_mux0000<10>_mand)
+     MULT_AND:I1->LO       0   0.597   0.000  S4/index_mux0000<4>_mand (S4/index_mux0000<4>_mand1)
+     MUXCY:DI->O           1   0.713   0.000  S4/Mmult__mult0000_Madd7_cy<4> (S4/Mmult__mult0000_Madd7_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd7_cy<5> (S4/Mmult__mult0000_Madd7_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd7_cy<6> (S4/Mmult__mult0000_Madd7_cy<6>)
+     XORCY:CI->O           1   0.654   0.465  S4/Mmult__mult0000_Madd7_xor<7> (S4/Mmult__mult0000_Madd_128)
+     LUT1:I0->O            1   0.561   0.000  S4/Mmult__mult0000_Madd11_cy<7>_rt (S4/Mmult__mult0000_Madd11_cy<7>_rt)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd11_cy<7> (S4/Mmult__mult0000_Madd11_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd11_cy<8> (S4/Mmult__mult0000_Madd11_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult__mult0000_Madd11_cy<9> (S4/Mmult__mult0000_Madd11_cy<9>)
+     XORCY:CI->O           1   0.654   0.380  S4/Mmult__mult0000_Madd11_xor<10> (S4/Mmult__mult0000_Madd_1511)
+     LUT3:I2->O            1   0.561   0.000  S4/Mmult__mult0000_Madd15_lut<15> (S4/Mmult__mult0000_Madd15_lut<15>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd15_cy<15> (S4/Mmult__mult0000_Madd15_cy<15>)
+     XORCY:CI->O           1   0.654   0.465  S4/Mmult__mult0000_Madd15_xor<16> (S4/Mmult__mult0000_Madd_1615)
+     LUT1:I0->O            1   0.561   0.000  S4/Mmult__mult0000_Madd16_cy<16>_rt (S4/Mmult__mult0000_Madd16_cy<16>_rt)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd16_cy<16> (S4/Mmult__mult0000_Madd16_cy<16>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult__mult0000_Madd16_xor<17> (S4/Mmult__mult0000_Madd_1716)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult__mult0000_Madd17_lut<17> (S4/Mmult__mult0000_Madd17_lut<17>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult__mult0000_Madd17_cy<17> (S4/Mmult__mult0000_Madd17_cy<17>)
+     XORCY:CI->O           1   0.654   0.357  S4/Mmult__mult0000_Madd17_xor<18> (S4/_mult0000<18>)
+     INV:I->O              1   0.562   0.000  S4/Msub_result_addsub0000_lut<18>_INV_0 (S4/Msub_result_addsub0000_lut<18>)
+     MUXCY:S->O            1   0.523   0.000  S4/Msub_result_addsub0000_cy<18> (S4/Msub_result_addsub0000_cy<18>)
+     XORCY:CI->O          13   0.654   0.836  S4/Msub_result_addsub0000_xor<19> (S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand)
+     MULT_AND:I1->LO       0   0.597   0.000  S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand (S4/Mmult_result_mult0000_index_mux0000<0>_x_result_addsub0000<19>_mand1)
+     MUXCY:DI->O           1   0.713   0.000  S4/Mmult_result_mult0000_Madd10_cy<10> (S4/Mmult_result_mult0000_Madd10_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<11> (S4/Mmult_result_mult0000_Madd10_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<12> (S4/Mmult_result_mult0000_Madd10_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<13> (S4/Mmult_result_mult0000_Madd10_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd10_cy<14> (S4/Mmult_result_mult0000_Madd10_cy<14>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd10_xor<15> (S4/Mmult_result_mult0000_Madd_2410)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd20_lut<17> (S4/Mmult_result_mult0000_Madd20_lut<17>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd20_cy<17> (S4/Mmult_result_mult0000_Madd20_cy<17>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd20_xor<18> (S4/Mmult_result_mult0000_Madd_2520)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd26_lut<22> (S4/Mmult_result_mult0000_Madd26_lut<22>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd26_cy<22> (S4/Mmult_result_mult0000_Madd26_cy<22>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd26_xor<23> (S4/Mmult_result_mult0000_Madd_2626)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd29_lut<26> (S4/Mmult_result_mult0000_Madd29_lut<26>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd29_cy<26> (S4/Mmult_result_mult0000_Madd29_cy<26>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd29_xor<27> (S4/Mmult_result_mult0000_Madd_2729)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd30_lut<27> (S4/Mmult_result_mult0000_Madd30_lut<27>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd30_cy<27> (S4/Mmult_result_mult0000_Madd30_cy<27>)
+     XORCY:CI->O           1   0.654   0.423  S4/Mmult_result_mult0000_Madd30_xor<28> (S4/Mmult_result_mult0000_Madd_2830)
+     LUT2:I1->O            1   0.562   0.000  S4/Mmult_result_mult0000_Madd31_lut<28> (S4/Mmult_result_mult0000_Madd31_lut<28>)
+     MUXCY:S->O            1   0.523   0.000  S4/Mmult_result_mult0000_Madd31_cy<28> (S4/Mmult_result_mult0000_Madd31_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  S4/Mmult_result_mult0000_Madd31_cy<29> (S4/Mmult_result_mult0000_Madd31_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  S4/Mmult_result_mult0000_Madd31_cy<30> (S4/Mmult_result_mult0000_Madd31_cy<30>)
+     XORCY:CI->O           2   0.654   0.382  S4/Mmult_result_mult0000_Madd31_xor<31> (S4/result_mult0000<31>)
+     LUT4:I3->O            1   0.561   0.000  S4/Mmux_result_mux000111 (S4/result_mux0001<0>)
+     FDRE:D                    0.197          S4/result_31
+    ----------------------------------------
+    Total                     31.797ns (24.109ns logic, 7.688ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 1)
+  Source:            mainNum_31 (FF)
+  Destination:       mainNum<31> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: mainNum_31 to mainNum<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.495   0.357  mainNum_31 (mainNum_31)
+     OBUF:I->O                 4.396          mainNum_31_OBUF (mainNum<31>)
+    ----------------------------------------
+    Total                      5.248ns (4.891ns logic, 0.357ns route)
+                                       (93.2% logic, 6.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 25.28 secs
+ 
+--> 
+
+Total memory usage is 4568568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

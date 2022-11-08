@@ -1,0 +1,666 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: BCDConverter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BCDConverter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BCDConverter"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-vq100
+
+---- Source Options
+Top Module Name                    : BCDConverter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/otal19/Desktop/Project/WoodalNumbers/BCDConverter.vhd" in Library work.
+Architecture behavioral of Entity bcdconverter is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <BCDConverter> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <BCDConverter> in library <work> (Architecture <behavioral>).
+Entity <BCDConverter> analyzed. Unit <BCDConverter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <BCDConverter>.
+    Related source file is "C:/Users/otal19/Desktop/Project/WoodalNumbers/BCDConverter.vhd".
+    Found 4-bit adder for signal <shift_11_8$add0000> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0001> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0002> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0003> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0004> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0005> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0006> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0007> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0008> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0009> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0010> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0011> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0012> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0013> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0014> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0015> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0016> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0017> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0018> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0019> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0020> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0021> created at line 68.
+    Found 4-bit adder for signal <shift_11_8$add0022> created at line 68.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0000> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0001> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0002> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0003> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0004> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0005> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0006> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0007> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0008> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0009> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0010> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0011> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0012> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0013> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0014> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0015> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0016> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0017> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0018> created at line 70.
+    Found 5-bit comparator greater for signal <shift_12$cmp_gt0019> created at line 70.
+    Found 4-bit adder for signal <shift_15_12$add0000> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0001> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0002> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0003> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0004> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0005> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0006> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0007> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0008> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0009> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0010> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0011> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0012> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0013> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0014> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0015> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0016> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0017> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0018> created at line 71.
+    Found 4-bit adder for signal <shift_15_12$add0019> created at line 71.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0000> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0001> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0002> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0003> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0004> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0005> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0006> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0007> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0008> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0009> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0010> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0011> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0012> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0013> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0014> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0015> created at line 73.
+    Found 5-bit comparator greater for signal <shift_17$cmp_gt0016> created at line 73.
+    Found 4-bit adder for signal <shift_19_16$add0000> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0001> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0002> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0003> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0004> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0005> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0006> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0007> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0008> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0009> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0010> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0011> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0012> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0013> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0014> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0015> created at line 74.
+    Found 4-bit adder for signal <shift_19_16$add0016> created at line 74.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0000> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0001> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0002> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0003> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0004> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0005> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0006> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0007> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0008> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0009> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0010> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0011> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0012> created at line 76.
+    Found 5-bit comparator greater for signal <shift_22$cmp_gt0013> created at line 76.
+    Found 4-bit adder for signal <shift_23_20$add0000> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0001> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0002> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0003> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0004> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0005> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0006> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0007> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0008> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0009> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0010> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0011> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0012> created at line 77.
+    Found 4-bit adder for signal <shift_23_20$add0013> created at line 77.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0000> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0001> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0002> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0003> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0004> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0005> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0006> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0007> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0008> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0009> created at line 79.
+    Found 5-bit comparator greater for signal <shift_24$cmp_gt0010> created at line 79.
+    Found 4-bit adder for signal <shift_27_24$add0000> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0001> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0002> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0003> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0004> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0005> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0006> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0007> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0008> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0009> created at line 80.
+    Found 4-bit adder for signal <shift_27_24$add0010> created at line 80.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0000> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0001> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0002> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0003> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0004> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0005> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0006> created at line 82.
+    Found 5-bit comparator greater for signal <shift_29$cmp_gt0007> created at line 82.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0000> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0001> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0002> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0003> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0004> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0005> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0006> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0007> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0008> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0009> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0010> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0011> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0012> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0013> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0014> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0015> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0016> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0017> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0018> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0019> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0020> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0021> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0022> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0023> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0024> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0025> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0026> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0027> created at line 61.
+    Found 5-bit comparator greater for signal <shift_3$cmp_gt0028> created at line 61.
+    Found 4-bit adder for signal <shift_31_28$add0000> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0001> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0002> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0003> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0004> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0005> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0006> created at line 83.
+    Found 4-bit adder for signal <shift_31_28$add0007> created at line 83.
+    Found 5-bit comparator greater for signal <shift_34$cmp_gt0000> created at line 85.
+    Found 5-bit comparator greater for signal <shift_34$cmp_gt0001> created at line 85.
+    Found 5-bit comparator greater for signal <shift_34$cmp_gt0002> created at line 85.
+    Found 5-bit comparator greater for signal <shift_34$cmp_gt0003> created at line 85.
+    Found 5-bit comparator greater for signal <shift_34$cmp_gt0004> created at line 85.
+    Found 4-bit adder for signal <shift_35_32$add0000> created at line 86.
+    Found 4-bit adder for signal <shift_35_32$add0001> created at line 86.
+    Found 4-bit adder for signal <shift_35_32$add0002> created at line 86.
+    Found 4-bit adder for signal <shift_35_32$add0003> created at line 86.
+    Found 4-bit adder for signal <shift_35_32$add0004> created at line 86.
+    Found 5-bit comparator greater for signal <shift_36$cmp_gt0000> created at line 88.
+    Found 5-bit comparator greater for signal <shift_36$cmp_gt0001> created at line 88.
+    Found 4-bit adder for signal <shift_39_36$add0000> created at line 89.
+    Found 4-bit adder for signal <shift_39_36$add0001> created at line 89.
+    Found 4-bit adder for signal <shift_3_0$add0000> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0001> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0002> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0003> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0004> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0005> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0006> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0007> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0008> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0009> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0010> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0011> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0012> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0013> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0014> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0015> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0016> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0017> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0018> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0019> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0020> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0021> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0022> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0023> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0024> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0025> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0026> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0027> created at line 62.
+    Found 4-bit adder for signal <shift_3_0$add0028> created at line 62.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0000> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0001> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0002> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0003> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0004> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0005> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0006> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0007> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0008> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0009> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0010> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0011> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0012> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0013> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0014> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0015> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0016> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0017> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0018> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0019> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0020> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0021> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0022> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0023> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0024> created at line 64.
+    Found 5-bit comparator greater for signal <shift_4$cmp_gt0025> created at line 64.
+    Found 4-bit adder for signal <shift_7_4$add0000> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0001> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0002> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0003> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0004> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0005> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0006> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0007> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0008> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0009> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0010> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0011> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0012> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0013> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0014> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0015> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0016> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0017> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0018> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0019> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0020> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0021> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0022> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0023> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0024> created at line 65.
+    Found 4-bit adder for signal <shift_7_4$add0025> created at line 65.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0000> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0001> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0002> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0003> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0004> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0005> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0006> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0007> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0008> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0009> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0010> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0011> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0012> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0013> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0014> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0015> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0016> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0017> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0018> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0019> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0020> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0021> created at line 67.
+    Found 5-bit comparator greater for signal <shift_9$cmp_gt0022> created at line 67.
+    Summary:
+	inferred 155 Adder/Subtractor(s).
+	inferred 155 Comparator(s).
+Unit <BCDConverter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 155
+ 4-bit adder                                           : 155
+# Comparators                                          : 155
+ 5-bit comparator greater                              : 155
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 155
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 153
+# Comparators                                          : 155
+ 5-bit comparator greater                              : 155
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <BCDConverter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BCDConverter, actual ratio is 51.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : BCDConverter.ngr
+Top Level Output File Name         : BCDConverter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 72
+
+Cell Usage :
+# BELS                             : 627
+#      LUT2                        : 1
+#      LUT3                        : 45
+#      LUT4                        : 577
+#      MUXF5                       : 4
+# IO Buffers                       : 72
+#      IBUF                        : 32
+#      OBUF                        : 40
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50avq100-5 
+
+ Number of Slices:                      358  out of    704    50%  
+ Number of 4 input LUTs:                623  out of   1408    44%  
+ Number of IOs:                          72
+ Number of bonded IOBs:                  72  out of     68   105% (*) 
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 66.567ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 276805210303124640 / 40
+-------------------------------------------------------------------------
+Delay:               66.567ns (Levels of Logic = 60)
+  Source:            num<29> (PAD)
+  Destination:       ten<2> (PAD)
+
+  Data Path: num<29> to ten<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.824   0.858  num_29_IBUF (Madd_shift_3_0_add0000_cy<0>)
+     LUT4:I0->O            6   0.561   0.635  shift_3_mux00011 (shift_3_mux0001)
+     LUT4:I1->O            8   0.562   0.666  shift_3_mux000211 (N156)
+     LUT3:I2->O            4   0.561   0.607  shift_1_mux000311 (N54)
+     LUT3:I0->O            3   0.561   0.559  shift_3_mux000311 (N157)
+     LUT4:I0->O            2   0.561   0.488  Madd_shift_7_4_add0001_cy<1>11 (Madd_shift_7_4_add0001_cy<1>)
+     LUT3:I0->O            1   0.561   0.000  shift_7_mux000136_G (N370)
+     MUXF5:I1->O           6   0.229   0.677  shift_7_mux000136 (shift_7_mux0001)
+     LUT3:I0->O            4   0.561   0.501  shift_5_mux000211 (N91)
+     LUT4:I3->O            5   0.561   0.604  shift_7_mux00021 (Madd_shift_11_8_add0000_cy<0>)
+     LUT3:I1->O            7   0.562   0.604  Madd_shift_15_12_add0000_lut<2>1 (Madd_shift_15_12_add0000_lut<2>)
+     LUT4:I3->O            2   0.561   0.382  Madd_shift_11_8_add0001_cy<1>11 (Madd_shift_11_8_add0001_cy<1>)
+     LUT4:I3->O            8   0.561   0.666  shift_9_cmp_gt0001 (shift_9_cmp_gt0001)
+     LUT3:I2->O            1   0.561   0.380  shift_9_mux000121 (N1110)
+     LUT4:I2->O            4   0.561   0.522  shift_9_mux00011 (Madd_shift_11_8_add0002_lut<2>)
+     LUT4:I2->O            7   0.561   0.668  shift_11_mux00021 (Madd_shift_15_12_add0000_cy<0>)
+     LUT3:I1->O            5   0.562   0.540  Madd_shift_19_16_add0000_lut<2>1 (Madd_shift_19_16_add0000_lut<2>)
+     LUT4:I3->O            2   0.561   0.403  Madd_shift_15_12_add0001_cy<1>11 (Madd_shift_15_12_add0001_cy<1>)
+     LUT4:I2->O            8   0.561   0.666  shift_15_mux00011 (shift_15_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_13_mux000121 (N1251)
+     LUT4:I2->O            4   0.561   0.522  shift_13_mux00011 (Madd_shift_15_12_add0002_lut<2>)
+     LUT4:I2->O            4   0.561   0.607  shift_13_mux000311 (N118)
+     LUT3:I0->O            3   0.561   0.559  shift_15_mux000311 (N265)
+     LUT4:I0->O            2   0.561   0.382  Madd_shift_19_16_add0001_cy<1>11 (Madd_shift_19_16_add0001_cy<1>)
+     LUT4:I3->O            6   0.561   0.592  shift_19_mux0001 (shift_19_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_17_mux000121 (N341)
+     LUT4:I2->O            4   0.561   0.522  shift_17_mux00011 (Madd_shift_19_16_add0002_lut<2>)
+     LUT4:I2->O            5   0.561   0.604  shift_19_mux00021 (Madd_shift_23_20_add0000_cy<0>)
+     LUT3:I1->O            8   0.562   0.645  Madd_shift_27_24_add0000_lut<2>1 (Madd_shift_27_24_add0000_lut<2>)
+     LUT4:I3->O            2   0.561   0.382  Madd_shift_23_20_add0001_cy<1>11 (Madd_shift_23_20_add0001_cy<1>)
+     LUT4:I3->O            9   0.561   0.720  shift_23_mux0001 (shift_23_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_21_mux000121 (N331)
+     LUT4:I2->O            4   0.561   0.522  shift_21_mux00011 (Madd_shift_23_20_add0002_lut<2>)
+     LUT4:I2->O            8   0.561   0.709  shift_23_mux00021 (Madd_shift_27_24_add0000_cy<0>)
+     LUT3:I1->O            5   0.562   0.540  Madd_shift_31_28_add0000_lut<2>1 (Madd_shift_31_28_add0000_lut<2>)
+     LUT4:I3->O            2   0.561   0.403  Madd_shift_27_24_add0001_cy<1>11 (Madd_shift_27_24_add0001_cy<1>)
+     LUT4:I2->O            8   0.561   0.666  shift_27_mux00011 (shift_27_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_25_mux000121 (N1461)
+     LUT4:I2->O            4   0.561   0.522  shift_25_mux00011 (Madd_shift_27_24_add0002_lut<2>)
+     LUT4:I2->O            4   0.561   0.607  shift_25_mux000311 (N134)
+     LUT3:I0->O            3   0.561   0.559  shift_27_mux000311 (N283)
+     LUT4:I0->O            2   0.561   0.488  Madd_shift_31_28_add0001_cy<1>11 (Madd_shift_31_28_add0001_cy<1>)
+     LUT3:I0->O            1   0.561   0.000  shift_31_mux000136_G (N366)
+     MUXF5:I1->O           6   0.229   0.592  shift_31_mux000136 (shift_31_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_29_mux000121 (N921)
+     LUT4:I2->O            4   0.561   0.522  shift_29_mux00011 (Madd_shift_31_28_add0002_lut<2>)
+     LUT4:I2->O            5   0.561   0.604  shift_31_mux00021 (Madd_shift_35_32_add0000_cy<0>)
+     LUT3:I1->O            6   0.562   0.571  Madd_shift_39_36_add0000_Madd_lut<2>1 (Madd_shift_39_36_add0000_Madd_lut<2>)
+     LUT4:I3->O            2   0.561   0.382  Madd_shift_35_32_add0001_cy<1>11 (Madd_shift_35_32_add0001_cy<1>)
+     LUT4:I3->O            6   0.561   0.592  shift_35_mux0001 (shift_35_mux0001)
+     LUT3:I2->O            1   0.561   0.380  shift_33_mux000121 (N911)
+     LUT4:I2->O            4   0.561   0.522  shift_33_mux00011 (Madd_shift_35_32_add0002_lut<2>)
+     LUT4:I2->O            4   0.561   0.607  shift_33_mux000311 (N83)
+     LUT3:I0->O            4   0.561   0.607  shift_35_mux000311 (N217)
+     LUT4:I0->O            1   0.561   0.000  Madd_shift_39_36_add0001_Madd_cy<1>111 (Madd_shift_39_36_add0001_Madd_cy<1>11)
+     MUXF5:I1->O           2   0.229   0.403  Madd_shift_39_36_add0001_Madd_cy<1>11_f5 (Madd_shift_39_36_add0001_Madd_cy<1>)
+     LUT4:I2->O            2   0.561   0.403  shift_36_cmp_gt00011 (shift_36_cmp_gt0001)
+     LUT3:I2->O            1   0.561   0.380  shift_37_mux000121 (N155)
+     LUT4:I2->O            1   0.561   0.357  shift_37_mux00011 (ten_2_OBUF)
+     OBUF:I->O                 4.396          ten_2_OBUF (ten<2>)
+    ----------------------------------------
+    Total                     66.567ns (36.768ns logic, 29.799ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 30.19 secs
+ 
+--> 
+
+Total memory usage is 4603004 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
